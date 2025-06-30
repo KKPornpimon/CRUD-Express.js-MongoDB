@@ -5,3 +5,6 @@
 5. connect mongodb
 6. npm i dotenv
 7. npm i mongoose
+8. service management
+9. CRUD
+10. middlewares basic
