@@ -1,10 +1,16 @@
+import User from "../models/User.js";
+
 const userController = {
-    hello: (req, res) => {
-        res.send('Hello World!')
+    getAllUsers: async (req, res) => {
+        try {
+            const users = await User.find();
+            res.status(200).json(users);
+        } catch (error) {
+            console.log('Error fetching users:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
     },
-    kanom: (req, res) => {
-        res.send('Kanom is delicious!')
-    }
+
 }
 
 export default userController;

@@ -1,11 +1,15 @@
 import express from 'express';
 import router from './routes/router.js';
+import dotenv from 'dotenv';
+import dbConnect from './dbConnect.js';
 
+dotenv.config()
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 app.use(express.json())
 app.use(router)
+dbConnect()
 
 
 

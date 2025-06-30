@@ -1,2 +1,7 @@
 1. npm i init --y
 2. npm i express nodemon
+3. router management
+4. controller management
+5. connect mongodb
+6. npm i dotenv
+7. npm i mongoose
